@@ -1,0 +1,10 @@
+
+body{
+    color: white;
+    background-color: rgb(6, 6, 34);
+}
+main h1{
+    text-align: center;
+    text-transform: capitalize;
+    
+}
