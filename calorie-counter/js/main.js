@@ -47,6 +47,16 @@ const output = document.getElementById("output");
   //
    function isInvalidInput(str) {
     //regex for letter e
-    const regex = /e/
+    //the e is set to insensitive and checks is found between this number range
+    const regex = /\d+e\d+/i // \d checks the occurance found in the str
+
+    //using match to filter out the regex
+     return str.match(regex)
     
+   }
+
+
+   function addEntry(){
+    //adding concatenation to the the dropdown
+       const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`)
    }
