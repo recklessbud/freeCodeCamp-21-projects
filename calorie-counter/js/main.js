@@ -23,7 +23,30 @@ const output = document.getElementById("output");
  //function to check if string is a number
   function cleanInputString(str) {
     //split the number
-    const strArray = str.split('')
+//     const strArray = str.split('')
+// // create a new Array
+//     const cleanStrArray = []
 
-    const strCleanArray = []
+//     //loop through the splitted string
+//       for(let i = 0; i< strArray.length; i++){
+//          //check if this signs are in the the strArray 
+//          if(!['+', '-', " "].includes(strArray[i])){
+//             //push to new array
+//            cleanInputString.push(strArray[i])
+//          }
+//       }
+ // moving to regex 
+     // check for the avaliability of the signs and whitespace
+    const regex = /[+-\s]/g
+     
+    //return the checked string and replace with an empty string
+     return str.replace(regex, "")
+
   }
+
+  //
+   function isInvalidInput(str) {
+    //regex for letter e
+    const regex = /e/
+    
+   }
