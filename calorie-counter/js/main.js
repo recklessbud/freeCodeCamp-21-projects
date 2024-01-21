@@ -59,4 +59,14 @@ const output = document.getElementById("output");
    function addEntry(){
     //adding concatenation to the the dropdown
        const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`)
+       //
+       const entryInput = targetInputContainer.querySelectorAll('input[type="text"]').length
+       const HTMLString = `
+       <label for="${entryDropdown.value}-${entryInput}-name">entry ${entryInput} number</label>
+         <input type="text" id="${entryDropdown.value}-${entryInput}-name" placeholder="Name" />
+          <label for="${entryDropdown.value}-${entryInput}-calories">Entry ${entryInput} Calories</label>
+         <input type="number" id="${entryDropdown.value}-${entryInput}-calories" min="0" placeholder="calories" />
+       `;
+
+       targetInputContainer.innerHTML += HTMLString
    }
